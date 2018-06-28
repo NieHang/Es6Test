@@ -11,9 +11,9 @@
 <body>
     <script>
         // 变量解构赋值
-        let [a, [b, c]] = [12, [5, 6]];
-        console.log(b, c);
-        
+        // let [a, [b, c]] = [12, [5, 6]];
+        // console.log(b, c);
+
         // json解构赋值
         let json = {
             name: '北上广',
@@ -29,6 +29,17 @@
         } = json;
 
         console.log(n, g, j);
+
+        // 这里c的暂无数据是c的默认值
+        // let [a, b, c='暂无数据'] = ['aa', 'bb'];
+        // console.log(a, b, c);
+        
+        // 两个变量交换数据
+        // let a = 12;
+        // let b = 5;
+        // [a, b] = [b, a];
+        // console.log(a, b);
+        
     </script>
 </body>
 
