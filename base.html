@@ -102,13 +102,33 @@
         // }
 
         // show(1, 2, 8, 4, 9);
-        
+
         // copy数组的两种方法
         // let arr = [1, 2, 3];
         // let arr2 = [...arr];
         // let arr2 = Array.from(arr);
         // console.log(arr2);
-        
+
+        /*
+            箭头函数，这里的1为返回值，括号里可写参数
+            箭头函数没有arguments,可用扩展运算符“...”代替
+            箭头函数不能当做构造函数使用
+        */
+        // let show = (a = 10, b = 20) => {
+        //     return a + b;
+        // }
+
+        // console.log(show(), '箭头函数');
+
+        // 箭头函数中的this: 定义函数所在的对象，不是运行时所在的对象
+        // let json = {
+        //     show: function () {
+        //         setTimeout(() => {
+        //             console.log(this);
+        //         }, 100);
+        //     }
+        // }
+        // json.show();
     </script>
 </body>
 
