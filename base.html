@@ -15,20 +15,20 @@
         // console.log(b, c);
 
         // json解构赋值
-        let json = {
-            name: '北上广',
-            age: 25,
-            job: '前端架构师'
-        }
+        // let json = {
+        //     name: '北上广',
+        //     age: 25,
+        //     job: '前端架构师'
+        // }
 
         // n,g,j分别为name,age,job的别名
-        let {
-            name: n,
-            age: g,
-            job: j
-        } = json;
+        // let {
+        //     name: n,
+        //     age: g,
+        //     job: j
+        // } = json;
 
-        console.log(n, g, j);
+        //console.log(n, g, j);
 
         // 这里c的暂无数据是c的默认值
         // let [a, b, c='暂无数据'] = ['aa', 'bb'];
@@ -70,6 +70,45 @@
         // 字符串填充
         console.log(str.padStart(str.length + strPad.length, strPad));
         console.log(str.padEnd(str.length + strPad.length, strPad));
+
+        // 函数默认参数已经被定义，不能再用let, const定义了
+        // function show(a = 100) {
+        //     // 这里定义a会报错
+        //     let a = 10;
+        //     console.log(a);
+
+        // }
+        // show();
+
+        // ...运算符(扩展运算符)
+        // let arr = [{
+        //     name: '张三'
+        // }, 'banana', 'pear'];
+
+        // 扩展数组
+        //console.log(...arr);
+
+        // 这里将传入的多个参数整合成一个数组
+        // function show(...a) {
+        //     console.log(a, '未排序');
+
+        //     // 参数整合成数组后可以直接调用数组方法sort()给参数进行从小到大的排序
+        //     console.log(a.sort(), '已排序');
+        // }
+
+        // function show(a, ...b) {
+        //     // 这里将剩余参数整合成数组
+        //     console.log(a, b);
+        // }
+
+        // show(1, 2, 8, 4, 9);
+        
+        // copy数组的两种方法
+        // let arr = [1, 2, 3];
+        // let arr2 = [...arr];
+        // let arr2 = Array.from(arr);
+        // console.log(arr2);
+        
     </script>
 </body>
 
