@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Es6对象</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        // 对象简洁语法
+        let name = '张三';
+        let age = 18;
+
+        let json = {
+            name, // name: name
+            age, // age: age
+            // showA: function () {
+            //     return 1;
+            // }
+            showA() {
+                return 1;
+            }
+        }
+        console.log(json.showA());
+
+        // 判断两个对象或值是否相等
+        console.log(Object.is(NaN, NaN));
+        // 合并对象
+        let json1 = {
+            a: 1
+        };
+        let json2 = {
+            a: 2,
+            b: 2
+        };
+        let json3 = {
+            c: 3
+        };
+
+        // 后面的对象值会覆盖前面的对象值
+        console.log(Object.assign(json1, json2, json3));
+        // 复制数组,可用于复制对象
+        let arr = [1, 2, 3];
+        let arr1 = Object.assign([], arr);
+
+        console.log(arr1);
+
+        // for (const key of Object.keys(json)) {
+        //     console.log(key);
+        // }
+
+        // for (const key of Object.value(json)) {
+        //     console.log(key);
+        // }
+
+        // for (const key of Object.entries(json)) {
+        //     console.log(key);
+        // }
+
+        // 可将Object的key, value, entries进行解构
+        let {keys, value, entries} = Object;
+
+        for (const key of keys(json)) {
+            console.log(key);
+        }
+
+        // 对象扩展符...,需要放在{}里面才行(计划在ES2018引入，现在使用还是需要注意兼容性问题)
+        console.log({...json});
+        
+    </script>
+</body>
+
+</html>
