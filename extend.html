@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类继承</title>
+</head>
+
+<body>
+    <script>
+        // 父类
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            // 静态方法可以被继承
+            static testStatic() {
+                return '这是静态方法';
+            }
+            showName() {
+                return `名字为：${this.name}`;
+            }
+        }
+
+        // 子类
+        class Student extends Person {
+            constructor(name, skill) {
+                // super函数获取父类构造函数
+                super(name);
+                this.skill = skill;
+            }
+            // 子类与父类同名的方法，子类同名方法覆盖父类同名方法
+            showName() {
+                // 父类的方法执行
+                let person = super.showName();
+
+                // 子类的代码执行
+                return `本人名字为${this.name}${person}`;
+            }
+            showSkill() {
+                return `本人技能为${this.skill}`;
+            }
+        }
+
+        let student = new Student('李四', '前端架构师');
+        
+        console.log(student.showName(), student.showSkill());
+        
+    </script>
+</body>
+
+</html>

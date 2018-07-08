@@ -33,9 +33,40 @@
         //     name: '李四',
         //     age: 15
         // });
-        // console.log(man.showName());
 
         // Es6的类和继承
+        let a = 'hero';
+
+        // class不能预解析
+        class Person { // 类也可以这么声明 const Person = class {};
+            // 构造函数，当调用new时，自动执行
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+                // 这里将showName的this绑定为当前类
+                this.showName = this.showName.bind(this);
+                console.log(`构造函数执行了，${name}，${age}`);
+            }
+            showName() {
+                return `名字为: ${this.name}`;
+            }
+            showAge() {
+                return `年龄为: ${this.age}`;
+            }
+            [a]() {
+                return `${a}`;
+            }
+        }
+
+        let man = new Person('李四', 18);
+
+        let {showName} = man;
+
+        console.log(man.showName(), man.showAge(), man.hero());
+
+        // 因为在构造函数中把showName的this绑定为当前类，所以不会报错
+        console.log(showName());
+        
     </script>
 </body>
 
