@@ -1,0 +1,32 @@
+{
+  "name": "es6test",
+  "version": "1.0.0",
+  "description": "Es6学习文件",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.15.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "server": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NieHang/Es6Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NieHang/Es6Test/issues"
+  },
+  "homepage": "https://github.com/NieHang/Es6Test#readme"
+}
