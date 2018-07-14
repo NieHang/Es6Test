@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // generator函数，生成器
+        function* show() {
+            yield '前端';
+            yield '架';
+            yield '构师';
+        }
+        let gen = show();
+        // console.log(gen.next());
+        // console.log(gen.next());
+        // console.log(gen.next());
+
+        // 只有for of 才能循环generator函数的内容。return的东西，不会被循环出来
+        // for (const val of gen) {
+        //     console.log(val);
+        // }
+
+        // 解构generator函数
+        // let [a, b, c] = gen;
+        // let [a, ...b] = gen;
+        // console.log(a, b);
+        // console.log(...show());
+    </script>
+</body>
+
+</html>
