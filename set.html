@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建set对象
+        let set = new Set(['a', 'b', {}]);
+        // 添加元素
+        set.add('c').add('d').add('e');
+        // 删除元素
+        set.delete('b');
+
+        console.log('------------------');
+
+        // 遍历set
+        for (let i of set) {
+            console.log(i);
+        }
+        // 判断是否有某元素
+        console.log(set.has('b'), '判断是否有b元素');
+        // set的长度
+        console.log(set.size, 'set的长度');
+
+        console.log('------------------');
+
+        set.forEach((value, index) => {
+            console.log(value, index);
+        });
+
+        console.log('------------------');
+
+        // 数组去重
+        let arr = [1, 2, 3, 4, 5, 1, 2, 3];
+
+        let arrSet = [...new Set(arr)];
+
+        console.log(arrSet);
+
+        // 使用map构建新set
+        let newSet = new Set([...arr].map(val=>val*2));
+        console.log(newSet);
+
+        // 清空set
+        set.clear();
+        console.log(set);
+    </script>
+</body>
+
+</html>
