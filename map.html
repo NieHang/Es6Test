@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let map = new Map();
+        map.set('前端', '架构师');
+        map.set('Es6', 'React');
+        map.set('穷', '弱');
+        map.delete('穷');
+        map.has('前端');
+        map.get('前端');
+
+        map.forEach((value, key)=>{
+            console.log(key, value);
+        });
+
+        let arr = [...map];
+
+        console.log(arr.map(val=>{
+            let obj = {};
+            obj.name = val;
+            return obj;
+        }));
+        
+    </script>
+</body>
+</html>
